@@ -5,7 +5,7 @@ def run(cmd):
     print("\n>>>", " ".join(cmd))
     subprocess.check_call(cmd, cwd=ROOT)
 def main():
-    run([sys.executable, "src/generate_synthetic_data.py", "--out_dir", "data/raw"])
+    run([sys.executable, "src/data.py", "--out_dir", "data/raw"])
     run([sys.executable, "src/task1_data_ingestion_cleaning.py"])
     run([sys.executable, "src/task2_sensor_preprocessing_feature_engineering.py"])
     run([sys.executable, "src/task3_outage_log_analysis_label_generation.py"])

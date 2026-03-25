@@ -2,7 +2,7 @@
 import argparse, os
 from datetime import datetime, timedelta
 import numpy as np, pandas as pd
-
+ 
 def generate_data(out_dir: str, seed: int = 42, n_assets: int = 12, n_hours: int = 24 * 90):
     rng = np.random.default_rng(seed)
     start = datetime(2024, 1, 1)
